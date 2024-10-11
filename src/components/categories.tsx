@@ -55,6 +55,7 @@ export const Categories = ({ items }: CategoriesProps) => {
 				return (
 					<button 
 						onClick={() => onClick(item.id)}
+						key={item.id}
 						className={cn(buttonClasses, item.id === categoryId ? 'bg-primary/25' : 'bg-primary/10')}>
 							{item.name}
 					</button>
