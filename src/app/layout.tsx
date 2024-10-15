@@ -6,6 +6,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
+import { ProModal } from "@/components/pro-modal";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           className={cn("bg-secondary", inter.className, "antialiased")}
         >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <ProModal />
             {children}
             <Toaster />
           </ThemeProvider>
